@@ -7,14 +7,14 @@ requires JQuery
 
 usage:
 
-<form>
-<textarea id="message"> </textarea>
-</form>
+&lt;form&gt;
+&lt;textarea id="message"&gt; &lt;/textarea&gt;
+&lt;/form&gt;
 
-<script type="text/javascript">
+&lt;script type="text/javascript"&gt;
 $(function(){
     $("#message").charCounter({"max": 250});
 });
-</script>
+&lt;/script&gt;
 
 http://www.ikawka.com
