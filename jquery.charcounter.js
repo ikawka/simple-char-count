@@ -10,7 +10,12 @@
         var myCharHolder = $('');
         this.after(myCharHolder);
 
-        this.bind('keyup', function(){
+        this.bind('keyup blur keypress change paste', function(){
+            if($(this).val().length > settings.max){
+                $(this).val($(this).val().substr(0, settings.max));
+                $(this).scrollTop($(this)[0].scrollHeight);
+            }
+            
             len = $(this).val().length;
             myCharHolder.html( len + '/' + settings.max);
         });
@@ -27,7 +32,11 @@
                     e.which != 8  && //backspace
                     e.which != 16 && //shift
                     e.which != 17 && //ctrl
-                    e.which != 18    //alt
+                    e.which != 18 && //alt
+                    !e.metaKey && //mac command key
+                    !e.ctrlKey && //
+                    !e.altKey && //
+                    !e.shiftKey
                 ) {
                 e.preventDefault();
             }
