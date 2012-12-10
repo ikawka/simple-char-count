@@ -7,7 +7,7 @@
         }, options);
 
         //make counter holder
-        var myCharHolder = $('<span id="'+charHolder+'_char" class="char_count_holder"></span>');
+        var myCharHolder = $('<span id="'+charHolder+'_char" class="char_counter"></span>');
         this.after(myCharHolder);
 
         this.bind('keyup blur keypress change paste', function(){
