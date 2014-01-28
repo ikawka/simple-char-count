@@ -17,4 +17,4 @@ $(function(){
 });
 &lt;/script&gt;
 
-http://www.ikawka.com
+http://bulletproofscript.wordpress.com/
